@@ -1,0 +1,52 @@
+
+{% extends 'index.html' %}
+{% load static %}
+{% block Body %} <section class="hero">
+        <div>
+            <h2>درمان با صدای دلنشین و آرام‌بخش</h2>
+            <button>رزرو جلسه</button>
+        </div>
+    </section>
+    <!-- اسلایدر -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{% static 'images/background.jpg' %}">
+{#                <i class="fas fa-book-open"></i> <!-- آیکون مقاله -->#}
+{#                <h3>مقاله اول</h3>#}
+{#                <p>توضیحات کوتاه درباره مقاله اول.</p>#}
+            </div>
+            <div class="swiper-slide">
+                  <img src="{% static 'images/slider3.png' %}">
+{#                <i class="fas fa-book-reader"></i> <!-- آیکون مقاله -->#}
+{#                <h3>مقاله دوم</h3>#}
+{#                <p>توضیحات کوتاه درباره مقاله دوم.</p>#}
+            </div>
+            <div class="swiper-slide">
+                  <img src="{% static 'images/Silder2.jpg' %}">
+{#                <i class="fas fa-user-friends"></i> <!-- آیکون ویس تراپی فردی -->#}
+{#                <h3>ویس تراپی فردی</h3>#}
+{#                <p>توضیحات کوتاه درباره ویس تراپی فردی.</p>#}
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/slider2.png' %}">
+{#                <i class="fas fa-users"></i> <!-- آیکون ویس تراپی گروهی -->#}
+{#                <h3>ویس تراپی گروهی</h3>#}
+{#                <p>توضیحات کوتاه درباره ویس تراپی گروهی.</p>#}
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+{#     {% include 'Home/Article.html' %}#}
+{% block section %}{% endblock %}
+     {% include 'Home/Schedule.html' %}
+    {% include 'Home/Therapy.html' %}
+{% include 'Home/Experience.html' %}
+   {% include 'Home/Certificates.html' %}
+
+  {% endblock %}

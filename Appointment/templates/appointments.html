@@ -1,0 +1,11 @@
+<h1>Your Appointments</h1>
+<ul>
+    {% for appointment in appointments %}
+        <li>
+            <strong>{{ appointment.therapist.name }}</strong> - {{ appointment.date }}
+            <p>{{ appointment.notes }}</p>
+        </li>
+    {% empty %}
+        <li>No appointments found.</li>
+    {% endfor %}
+</ul>

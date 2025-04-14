@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block Body %}
+    {% block section %}
+        <section id="articles">
+            <h2>مقاله‌ها</h2>
+            <div class="articles">
+                {#            <div class="card">#}
+                {#                <i class="fas fa-book-open"></i> <!-- آیکون مقاله -->#}
+                {#                <h3>مقاله اول</h3>#}
+                {#                <p>توضیحات کوتاه درباره مقاله اول.</p>#}
+                {#            </div>#}
+                {% for article in articles %}
+                    <div class="card">
+                        <i class="fas fa-book-reader"></i> <!-- آیکون مقاله -->
+                        <h3>{{ articles.title }}</h3>
+                        <p>{{ articles.Short_description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,13 @@
+<h1>Book an Appointment</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Appointment</button>
+</form>
+
+<h2>Therapists</h2>
+<ul>
+    {% for therapist in therapists %}
+        <li>{{ therapist.name }} - {{ therapist.specialty }}</li>
+    {% endfor %}
+</ul>
